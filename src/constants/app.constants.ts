@@ -1,0 +1,1 @@
+export const ZOND_WEBSOCKET_URL = 'ws://209.250.255.226:8546';

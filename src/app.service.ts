@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import Web3, { Web3ZondInterface } from '@theqrl/web3';
 import { RegisteredSubscription } from '@theqrl/web3-zond';
+import { ZOND_WEBSOCKET_URL } from './constants/app.constants';
 
 @Injectable()
 export class AppService {
@@ -8,7 +9,7 @@ export class AppService {
 
   constructor() {
     const zondWebSocketProvider = new Web3.providers.WebsocketProvider(
-      'ws://209.250.255.226:8546',
+      ZOND_WEBSOCKET_URL,
     );
     this.zond = new Web3({
       provider: zondWebSocketProvider,
