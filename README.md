@@ -4,7 +4,7 @@ A http API for handling subscription based JSON RPC methods which requires web s
 
 #### 1. zond_subscribe
 
-A method that subscribes to specific Ethereum events, returning a subscription ID used to receive notifications.
+A method that subscribes to specific Ethereum events, returning a subscription ID used to receive notifications. A unique subscription ID that can be used to unsubscribe or identify incoming notifications will be returned.
 
 - ##### Request
 
@@ -31,9 +31,9 @@ A method that subscribes to specific Ethereum events, returning a subscription I
 > "0xbb0ecff80c39d75faac664a6dff7c43a"
 > ```
 
-#### 1. zond_unsubscribe
+#### 2. zond_unsubscribe
 
-A method that unsubscribes from a specific Ethereum event, using the subscription ID provided by eth_subscribe.
+A method that unsubscribes from a specific Ethereum event, using the subscription ID provided by eth_subscribe. A boolean value indicating whether the unsubscription was successful will be returned.
 
 - ##### Request
 
